@@ -6,7 +6,7 @@ export default function Location() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const venueName = 'Tunçalp Özgen Kongre ve Konferans Merkezi';
+  const venueName = 'Mehmet Akif Ersoy K Salonu';
   const googleMapsEmbedUrl =
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.607!2d32.7337!3d39.8667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f8a0a4a7e2d%3A0x9c6b1e3b8e0a1234!2sTun%C3%A7alp%20%C3%96zgen%20Kongre%20ve%20Konferans%20Merkezi!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str';
   const googleMapsDirectionsUrl =
@@ -74,7 +74,7 @@ export default function Location() {
             <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-10 pt-5 border-t border-accent/10 w-full">
               <div className="flex items-center gap-1 text-sm sm:text-base text-text-muted font-body">
                 <span className="w-2 h-2 rounded-full bg-cta flex-shrink-0" />
-                1000 kişi kapasiteli konferans salonu
+                300 kişi kapasiteli konferans salonu
               </div>
               <div className="flex items-center gap-1 text-sm sm:text-base text-text-muted font-body">
                 <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />

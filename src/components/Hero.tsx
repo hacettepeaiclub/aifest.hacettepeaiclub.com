@@ -112,16 +112,25 @@ export default function Hero() {
           <span className="text-cta font-bold"><br />bir araya geliyoruz.</span>
         </motion.p>
 
-        {/* Sub-text */}
-        <motion.p
+        {/* Sub-text & Date */}
+        <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 5, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
-          className="mt-2 sm:mt-4 text-xs sm:text-sm text-white/41 font-body font-light"
-          style={{ marginBottom: '-30px' }}
+          className="mt-3 flex flex-col items-center gap-2"
+          style={{ marginBottom: '-25px' }}
         >
-          Hacettepe Üniversitesi Yapay Zeka Topluluğu · #AI4All
-        </motion.p>
+          <div className="inline-flex items-center gap-2 px-4 sm:px-5 py-[3px] rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium text-xs sm:text-sm shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-cta animate-pulse" style={{ marginLeft: "10px" }} />
+            <span className="font-semibold text-white">3 – 4 Kasım 2026</span>
+            <span className="text-white/40"> ·</span>
+            <span className="text-white/80" style={{ marginRight: "10px" }}>Salı & Çarşamba </span>
+
+          </div>
+          <p className="text-xs sm:text-sm text-white/40 font-body font-light">
+            Hacettepe Üniversitesi Yapay Zeka Topluluğu · #AIForAll
+          </p>
+        </motion.div>
 
         {/* 3D Countdown */}
         <motion.div

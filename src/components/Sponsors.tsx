@@ -62,73 +62,109 @@ const platinSponsors: Sponsor[] = [
   {
     name: 'DeePix',
     color: 'from-amber-300 to-amber-500',
-    logo: 'deepixai_logo.jpeg',
+    logo: 'deepix.png',
     link: 'https://deepixai.com',
     linkedin: 'https://www.linkedin.com/company/deepixai',
   },
-  // { name: 'HAVELSAN', color: 'from-sky-400 to-blue-600' },
 ];
 
 const altinSponsors: Sponsor[] = [
   {
     name: 'ASELSAN',
     color: 'from-violet-400 to-purple-600',
-    logo: 'aselsan.jpg',
+    logo: 'aselsan.png',
     link: 'https://www.aselsan.com',
     instagram: 'https://www.instagram.com/aselsan/',
     youtube: 'https://www.youtube.com/@aselsantv',
     linkedin: 'https://www.linkedin.com/company/aselsan',
-    x: 'https://x.com/aselsan'
+    x: 'https://x.com/aselsan',
   },
-  // { name: 'Türk Telekom', color: 'from-blue-400 to-cyan-500' },
-  // { name: 'Anadolu Grubu', color: 'from-red-400 to-orange-500' },
-  // { name: 'TUSAŞ', color: 'from-emerald-400 to-green-600' },
 ];
 
-const gumusSponsors: Sponsor[] = [
-  // { name: 'Massive Bio', color: 'from-teal-300 to-cyan-500' },
-  // { name: 'Miuul', color: 'from-indigo-400 to-blue-500' },
-  // { name: 'Digicertify', color: 'from-green-400 to-emerald-500' },
-  // { name: 'Turkcell', color: 'from-yellow-400 to-amber-500' },
-  // { name: 'İş Bankası', color: 'from-blue-500 to-indigo-600' },
-  // { name: 'BtcTurk', color: 'from-sky-400 to-blue-500' },
-];
+const gumusSponsors: Sponsor[] = [];
 
 const fuayeSponsors: Sponsor[] = [
-  // { name: 'Tat', color: 'from-red-400 to-red-600' },
-  // { name: "Nuh'un Ankara Makarnası", color: 'from-yellow-400 to-orange-500' },
-  // { name: 'Kanta Coffee Shop', color: 'from-amber-700 to-amber-900' },
-  // { name: 'Cihan Kuruyemiş', color: 'from-green-500 to-lime-600' },
-  // { name: 'Meşhur Selanik Aspava', color: 'from-red-500 to-orange-600' },
-  // { name: 'Elmasu', color: 'from-pink-400 to-rose-500' },
-  // { name: 'Salina', color: 'from-blue-300 to-cyan-400' },
-  // { name: 'Campus Cafe', color: 'from-amber-500 to-yellow-600' },
+  {
+    name: 'Nescafé',
+    color: 'from-red-500 to-amber-600',
+    logo: 'nescafe.png',
+    link: 'https://www.nescafe.com/tr',
+    instagram: 'https://www.instagram.com/nescafetr/',
+    youtube: 'https://www.youtube.com/@NescafeTurkiye',
+    linkedin: 'https://www.linkedin.com/company/nestle',
+    x: 'https://x.com/nescafetr',
+  },
+  {
+    name: 'Tea Co.',
+    color: 'from-emerald-400 to-teal-600',
+    logo: 'teaco.png',
+    link: 'https://teaco.com.tr',
+    instagram: 'https://www.instagram.com/teacotr/',
+    youtube: 'https://www.youtube.com/@teaco.1790',
+    linkedin: 'https://www.linkedin.com/company/drteaco/',
+  },
+  {
+    name: 'The Purest Solutions',
+    color: 'from-stone-600 to-neutral-800',
+    logo: 'thepurestsolutions.png',
+    link: 'https://thepurestsolutions.com',
+    instagram: 'https://www.instagram.com/thepurestsolutions/',
+    youtube: 'https://www.youtube.com/@ThePurestSolutions',
+    linkedin: 'https://www.linkedin.com/company/the-purest-solutions/',
+  },
+  {
+    name: 'Pure Choice',
+    color: 'from-rose-400 to-pink-600',
+    logo: 'purechoice.png',
+    link: 'https://purechoice.com.tr',
+    instagram: 'https://www.instagram.com/purechoicecosmetics/',
+    linkedin: 'https://www.linkedin.com/company/pure-choice-kozmetik-anonim-şirketi',
+  },
+  {
+    name: 'Odi',
+    color: 'from-orange-400 to-amber-500',
+    logo: 'odi.png',
+    link: 'https://getodi.com',
+    instagram: 'https://www.instagram.com/getodi_/',
+    linkedin: 'https://www.linkedin.com/company/getodi/',
+  },
+  {
+    name: 'AIESEC',
+    color: 'from-blue-500 to-sky-600',
+    logo: 'aiesec.png',
+    link: 'https://aiesec.org.tr',
+    instagram: 'https://www.instagram.com/aiesecturkey/',
+    youtube: 'https://www.youtube.com/@aiesec.turkiye',
+    linkedin: 'https://www.linkedin.com/company/aiesec-turkey/',
+  },
 ];
 
-const medyaSponsors: Sponsor[] = [
-  // { name: 'Etkinkampüs', color: 'from-purple-400 to-violet-500' },
-  // { name: 'Bilim Şenliği', color: 'from-blue-400 to-indigo-500' },
-  // { name: 'Tekno Haber', color: 'from-cyan-400 to-teal-500' },
-  // { name: 'AI Turkey', color: 'from-emerald-400 to-green-600' },
-  // { name: 'StartupHR', color: 'from-orange-400 to-red-500' },
-];
+const medyaSponsors: Sponsor[] = [];
 
 function SponsorPill({ sponsor }: { sponsor: Sponsor }) {
   const hasSocials = sponsor.link || sponsor.instagram || sponsor.youtube || sponsor.linkedin || sponsor.x;
 
   return (
     <div className="flex-shrink-0 flex flex-col items-center group w-[130px] sm:w-[180px]">
-      <div className={`w-28 h-28 sm:w-40 sm:h-40 rounded-3xl bg-gradient-to-br ${sponsor.color} flex items-center justify-center text-white font-heading font-bold text-3xl sm:text-5xl shadow-sm border border-accent/15 hover:shadow-md hover:shadow-accent/5 hover:-translate-y-1 transition-all duration-300 overflow-hidden relative`}>
+      <a
+        href={sponsor.link || '#'}
+        target={sponsor.link ? '_blank' : undefined}
+        rel={sponsor.link ? 'noopener noreferrer' : undefined}
+        className="w-28 h-28 sm:w-40 sm:h-40 rounded-3xl bg-white/95 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 shadow-sm border border-white/60 hover:shadow-xl hover:border-accent/40 hover:-translate-y-1 transition-all duration-300 overflow-hidden relative cursor-pointer"
+        aria-label={sponsor.name}
+      >
         {sponsor.logo ? (
           <img
             src={`${import.meta.env.BASE_URL}${sponsor.logo}`}
             alt={sponsor.name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
-          sponsor.name.charAt(0)
+          <div className={`w-full h-full rounded-2xl bg-gradient-to-br ${sponsor.color} flex items-center justify-center text-white font-heading font-bold text-3xl sm:text-5xl`}>
+            {sponsor.name.charAt(0)}
+          </div>
         )}
-      </div>
+      </a>
       <div className="flex flex-col items-center gap-1.5 mt-3 sm:mt-4">
         <span className="font-body font-semibold text-xs sm:text-sm text-text text-center w-full truncate px-2">{sponsor.name}</span>
 
@@ -139,7 +175,7 @@ function SponsorPill({ sponsor }: { sponsor: Sponsor }) {
                 href={sponsor.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1 rounded-lg text-text-muted hover:text-cta hover:bg-white/50 transition-colors"
+                className="p-1 rounded-lg text-text/75 hover:text-cta hover:bg-white/50 transition-colors"
                 aria-label={`${sponsor.name} Website`}
                 title="Website"
               >
@@ -151,7 +187,7 @@ function SponsorPill({ sponsor }: { sponsor: Sponsor }) {
                 href={sponsor.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1 rounded-lg text-text-muted hover:text-pink-500 hover:bg-white/50 transition-colors"
+                className="p-1 rounded-lg text-text/75 hover:text-pink-500 hover:bg-white/50 transition-colors"
                 aria-label={`${sponsor.name} Instagram`}
                 title="Instagram"
               >
@@ -163,7 +199,7 @@ function SponsorPill({ sponsor }: { sponsor: Sponsor }) {
                 href={sponsor.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1 rounded-lg text-text-muted hover:text-red-500 hover:bg-white/50 transition-colors"
+                className="p-1 rounded-lg text-text/75 hover:text-red-500 hover:bg-white/50 transition-colors"
                 aria-label={`${sponsor.name} YouTube`}
                 title="YouTube"
               >
@@ -175,7 +211,7 @@ function SponsorPill({ sponsor }: { sponsor: Sponsor }) {
                 href={sponsor.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1 rounded-lg text-text-muted hover:text-blue-500 hover:bg-white/50 transition-colors"
+                className="p-1 rounded-lg text-text/75 hover:text-blue-600 hover:bg-white/50 transition-colors"
                 aria-label={`${sponsor.name} LinkedIn`}
                 title="LinkedIn"
               >
@@ -187,7 +223,7 @@ function SponsorPill({ sponsor }: { sponsor: Sponsor }) {
                 href={sponsor.x}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1 rounded-lg text-text-muted hover:text-gray-900 hover:bg-white/50 transition-colors"
+                className="p-1 rounded-lg text-text/75 hover:text-gray-900 hover:bg-white/50 transition-colors"
                 aria-label={`${sponsor.name} X`}
                 title="X"
               >
@@ -233,6 +269,10 @@ function TierSection({ title, sponsors, tierColor, direction = 'left', speed = '
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
+  if (!sponsors || sponsors.length === 0) {
+    return null;
+  }
+
   return (
     <motion.div
       ref={ref}
@@ -266,9 +306,9 @@ export default function Sponsors() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16 px-4 sm:px-8 lg:px-16 xl:px-32 w-full"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text" style={{ marginBottom: '20px' }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center" style={{ marginBottom: '20px' }}>
             <span className="bg-gradient-to-r from-accent to-cta bg-clip-text text-transparent">
-              <br />Sponsorlar <br />
+              Sponsorlar
             </span>
           </h2>
         </motion.div>
@@ -299,7 +339,9 @@ export default function Sponsors() {
         />
 
         {/* Divider */}
-        <div className="my-[5px] mx-auto max-w-md h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
+        {fuayeSponsors.length > 0 && (platinSponsors.length > 0 || altinSponsors.length > 0) && (
+          <div className="my-[15px] mx-auto max-w-md h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
+        )}
 
         {/* Foyer & Media */}
         <TierSection

@@ -3,7 +3,8 @@ import { Canvas, useThree, useFrame } from '@react-three/fiber';
 import { Text3D, Center, Float, Environment, ContactShadows, Text } from '@react-three/drei';
 import * as THREE from 'three';
 
-const TARGET_DATE = new Date('2026-10-24T10:00:00').getTime();
+// 1. Gün: 3 Kasım 2026 Salı, 09:30 (Kayıt & Karşılama Başlangıcı)
+const TARGET_DATE = new Date('2026-11-03T09:30:00').getTime();
 
 function TimeBlock({ value, label, position, index }: { value: string, label: string, position: [number, number, number], index: number }) {
   const pivotRef = useRef<THREE.Group>(null);

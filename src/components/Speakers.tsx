@@ -15,32 +15,23 @@ interface Speaker {
   org: string;
   color: string;
   linkedin: string;
+  image?: string;
 }
 
 const row1Speakers: Speaker[] = [
-  { name: 'Sinem Akbal', title: 'Yapay Zeka Araştırmacısı', org: 'ODTÜ', color: 'from-cta to-accent', linkedin: 'https://linkedin.com' },
-  { name: 'Ege Eray Turan', title: 'Makine Öğrenmesi Uzmanı', org: 'Google DeepMind', color: 'from-accent to-deep', linkedin: 'https://linkedin.com' },
-  { name: 'Nilay Ekizoğlu', title: 'Veri Bilimi Lideri', org: 'Microsoft', color: 'from-badge to-accent', linkedin: 'https://linkedin.com' },
-  { name: 'Muhammet Tayyip Muslu', title: 'Doğal Dil İşleme', org: 'Hacettepe Üniversitesi', color: 'from-deep to-cta', linkedin: 'https://linkedin.com' },
-  { name: 'Emel Çabuk', title: 'AI Mühendisi', org: 'Meta AI', color: 'from-cta to-badge', linkedin: 'https://linkedin.com' },
-  { name: 'Dr. Burak Yılıdz', title: 'Robotik & Otomasyon', org: 'TUSAŞ', color: 'from-accent to-cta', linkedin: 'https://linkedin.com' },
-  { name: 'Elif Bayram', title: 'Bilgisayarlı Görü', org: 'ASELSAN', color: 'from-deep to-badge', linkedin: 'https://linkedin.com' },
-  { name: 'Prof. Dr. Ali Öztemur', title: 'Derin Öğrenme', org: 'İTÜ', color: 'from-cta to-deep', linkedin: 'https://linkedin.com' },
-  { name: 'Berivan Ayyıldız', title: 'NLP Araştırmacısı', org: 'Hugging Face', color: 'from-badge to-cta', linkedin: 'https://linkedin.com' },
-  { name: 'Seval Şahin', title: 'Büyük Dil Modelleri', org: 'OpenAI', color: 'from-accent to-badge', linkedin: 'https://linkedin.com' },
+  { name: 'Merve Benlikaş Demirbağ', title: 'Otomotiv Sektöründe Yapay Zeka', org: 'Ford Otosan', color: 'from-cta to-accent', linkedin: 'https://www.linkedin.com/in/merve-benlika%C5%9F-8b045b12a', image: 'speakers/merve_benlikas.png' },
+  { name: 'Bahar Serçin Halefoğlu', title: 'AI Governance Advisor', org: 'ALSE Data CEO', color: 'from-accent to-deep', linkedin: 'https://www.linkedin.com/in/baharsercinhalefoglu/', image: 'speakers/bahar_sercin_halefoglu.png' },
+  { name: 'Dr. Fatih Hattatoğlu', title: 'AI Strategist & Data Scientist', org: 'Wise Maple', color: 'from-badge to-accent', linkedin: 'https://www.linkedin.com/in/fatih-hattatoglu-phd/', image: 'speakers/fatih_hattatoglu.png' },
+  { name: 'Burak Tunca', title: 'Fintech Sektöründe Yapay Zeka', org: 'PayTR', color: 'from-deep to-cta', linkedin: 'https://www.linkedin.com/in/buraktunca01', image: 'speakers/burak_tunca.png' },
+  { name: 'Çağdaş Hakan Aladağ', title: "Yapay Zeka'nın Geleceği", org: 'Hacettepe Üniversitesi', color: 'from-cta to-badge', linkedin: 'https://www.linkedin.com/in/cagdas-hakan-aladag-279b9221/', image: 'speakers/cagdas_hakan_aladag.png' },
 ];
 
 const row2Speakers: Speaker[] = [
-  { name: 'Onat Yıldırım', title: 'MLOps Uzmanı', org: 'Amazon AWS', color: 'from-deep to-accent', linkedin: 'https://linkedin.com' },
-  { name: 'Atalay Gürel', title: 'Medikal Yapay Zeka', org: 'Koç Üniversitesi', color: 'from-cta to-accent', linkedin: 'https://linkedin.com' },
-  { name: 'Dr. Oğuzhan Özboyacıoğlu', title: 'AI Güvenliği & Etik', org: 'HAVELSAN', color: 'from-accent to-deep', linkedin: 'https://linkedin.com' },
-  { name: 'Emel Erol', title: 'LLM Sistem Mimarisi', org: 'Trendyol Tech', color: 'from-badge to-cta', linkedin: 'https://linkedin.com' },
-  { name: 'Prof. Dr. Oğuz Ergin', title: 'Bilgisayar Mimarisi', org: 'TOBB ETÜ', color: 'from-cta to-badge', linkedin: 'https://linkedin.com' },
-  { name: 'Daron Yöndem', title: 'Bulut & AI Teknik Lider', org: 'Microsoft', color: 'from-deep to-cta', linkedin: 'https://linkedin.com' },
-  { name: 'Melike Palsü Kurt', title: 'Dijital Dönüşüm Uzmanı', org: 'Cumhurbaşkanlığı DDÖ', color: 'from-accent to-cta', linkedin: 'https://linkedin.com' },
-  { name: 'Burcu Öksüz', title: 'Yazılım Mimarısı', org: 'Microsoft', color: 'from-badge to-accent', linkedin: 'https://linkedin.com' },
-  { name: 'Cihan Altay', title: 'Veri Analitiği Yöneticisi', org: 'Türkiye İş Bankası', color: 'from-cta to-deep', linkedin: 'https://linkedin.com' },
-  { name: 'Güven Orkun Tanık', title: 'Yapay Zeka Teknik Lideri', org: 'TUSAŞ', color: 'from-deep to-badge', linkedin: 'https://linkedin.com' },
+  { name: 'Ata Seren', title: 'Siber Güvenlikte Yapay Zeka', org: 'HAVELSAN', color: 'from-deep to-accent', linkedin: 'https://www.linkedin.com/in/ataseren', image: 'speakers/ata_seren.png' },
+  { name: 'Azra Melis Ertan', title: 'Siber Güvenlik Uzmanı', org: 'Trendyol', color: 'from-cta to-accent', linkedin: 'https://www.linkedin.com/in/azra-melis-ertan/', image: 'speakers/azra_melis_ertan.png' },
+  { name: 'Ege Mert Gülderen', title: 'Model Değil: Sistem', org: 'DeePix', color: 'from-accent to-deep', linkedin: 'https://www.linkedin.com/in/egemertg%C3%BClderen/', image: 'speakers/ege_mert_gulderen.jpg' },
+  { name: 'Aytaç Mestçi', title: 'Digital Ecosystem Innovator', org: 'MarkeFront', color: 'from-badge to-cta', linkedin: 'https://www.linkedin.com/in/aytacmestci/', image: 'speakers/aytac_mestci.png' },
+  { name: 'Gürçin Gökçebağ', title: 'Educator & Strategist | Speaker', org: 'WeAcademyTR', color: 'from-cta to-badge', linkedin: 'https://www.linkedin.com/in/gürçin-gökçebağ/', image: 'speakers/gurcin_gokcebag.png' },
 ];
 
 function SpeakerCard({ speaker }: { speaker: Speaker }) {
@@ -65,8 +56,21 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
         <div className="absolute inset-0 bg-[#f3f4f6]/45 backdrop-blur-3xl border border-white/60 rounded-3xl overflow-hidden shadow-xl flex flex-col items-center justify-center p-4 sm:p-6 [backface-visibility:hidden] [transform:rotateX(0deg)_translateZ(150px)]">
 
           {/* Round photo frame */}
-          <div className={`w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br ${speaker.color} flex items-center justify-center text-white font-heading font-bold text-xl sm:text-3xl shadow-lg ring-4 ring-white`} style={{ marginBottom: "24px" }}>
-            {initials}
+          <div
+            className={`w-16 h-16 sm:w-24 sm:h-24 rounded-full overflow-hidden flex items-center justify-center shadow-lg ring-4 ring-white shrink-0 ${speaker.image ? 'bg-white/40' : `bg-gradient-to-br ${speaker.color} text-white font-heading font-bold text-xl sm:text-3xl`
+              }`}
+            style={{ marginBottom: "24px" }}
+          >
+            {speaker.image ? (
+              <img
+                src={`${import.meta.env.BASE_URL}${speaker.image}`}
+                alt={speaker.name}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            ) : (
+              initials
+            )}
           </div>
 
           {/* Name & title */}

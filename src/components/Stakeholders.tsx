@@ -12,28 +12,59 @@ function InstagramIcon({ className }: { className?: string }) {
 
 const partners = [
   {
-    name: 'Atılım Üniversitesi\nYapay Zeka Topluluğu',
-    color: 'from-blue-400 to-blue-600',
-    logo: 'atilim_logo.png',
-    instagram: 'https://www.instagram.com/atilimai'
+    name: 'Ankara Üniversitesi\nBÖTE Topluluğu',
+    badge: 'ANKARA BÖTE',
+    logo: 'ankaraunibote_logo.jpg',
+    instagram: 'https://www.instagram.com/ankaraunibote/'
+  },
+  {
+    name: 'ODTÜ\nBilgisayar Topluluğu',
+    badge: 'METU CCLUB',
+    logo: 'metu_cclub.png',
+    instagram: 'https://www.instagram.com/metucclub/'
+  },
+  {
+    name: 'Bilkent Üniversitesi\nİşletme ve Ekonomi Topluluğu',
+    badge: 'BİLKENT MEC',
+    logo: 'bilkent_mec.png',
+    instagram: 'https://www.instagram.com/bilkentmec/'
   },
   {
     name: 'Atılım Üniversitesi\nIEEE Topluluğu',
-    color: 'from-red-400 to-yellow-500',
+    badge: 'IEEE ATILIM',
     logo: 'ieee_atilim.jpg',
-    instagram: 'https://www.instagram.com/ieeeatilim'
+    instagram: 'https://www.instagram.com/ieeeatilim/'
   },
   {
-    name: 'Ankara Üniversitesi\nBÖTE Topluluğu',
-    color: 'from-indigo-400 to-purple-500',
-    logo: 'ankaraunibote_logo.jpg',
-    instagram: 'https://www.instagram.com/ankaraunibote'
+    name: 'Hacettepe Üniversitesi\nİstatistik Topluluğu',
+    badge: 'HÜİST',
+    logo: 'huist.png',
+    instagram: 'https://www.instagram.com/huistatistik/'
   },
-  // { name: 'Yazılım Topluluğu', color: 'from-green-400 to-emerald-500' },
-  // { name: 'Robotik Topluluğu', color: 'from-orange-400 to-red-500' },
-  // { name: 'Siber Güvenlik Topluluğu', color: 'from-gray-500 to-slate-700' },
-  // { name: 'Veri Bilimi Kulübü', color: 'from-cyan-400 to-teal-500' },
-  // { name: 'Girişimcilik Topluluğu', color: 'from-amber-400 to-orange-500' },
+  {
+    name: 'Gazi Üniversitesi\nSiber Güvenlik Topluluğu',
+    badge: 'GAZİ CYBER',
+    logo: 'gazi_cyber.png',
+    instagram: 'https://www.instagram.com/gazicyber/'
+  },
+  {
+    name: 'Atılım Üniversitesi\nYapay Zeka Topluluğu',
+    badge: 'ATILIM AI',
+    logo: 'atilim_logo.png',
+    instagram: 'https://www.instagram.com/atilimai/'
+  },
+  {
+    name: 'Bilkent Üniversitesi\nGenç Girişimciler Topluluğu',
+    badge: 'BİLKENT YES',
+    logo: 'bilkent_yes.png',
+    instagram: 'https://www.instagram.com/bilkentyes/'
+  },
+  {
+    name: 'Ankara Üniversitesi\nYapay Zeka ve Görüntü İşleme Topluluğu',
+    badge: 'ANKARA YAZGIT',
+    logo: 'ankara_yazgit.png',
+    instagram: 'https://www.instagram.com/au_yazgit/'
+  },
 ];
 
 export default function Stakeholders() {
@@ -52,58 +83,60 @@ export default function Stakeholders() {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center justify-center text-center mb-12 sm:mb-16 w-full"
         >
-
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white" style={{ textAlign: 'center' }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white text-center">
             <span className="bg-gradient-to-r from-cta to-badge bg-clip-text text-transparent">
               <br /> Paydaşlar
             </span>
           </h2>
-          <p className="mt-4 text-white/80 font-body max-w-2xl mx-auto text-base sm:text-lg" style={{ textAlign: 'center', fontStyle: 'italic', marginBottom: '10px' }}>
-            AI Fest'i birlikte şekillendirdiğimiz topluluklar ve kurumsal ortaklar <br />
+          <p className="mt-4 text-white/80 font-body max-w-2xl mx-auto text-base sm:text-lg text-center italic mb-2">
+            AI Fest'i birlikte şekillendirdiğimiz topluluklar ve kurumsal ortaklar
           </p>
         </motion.div>
 
         {/* Partners grid */}
-        <div className="w-full flex flex-wrap justify-center gap-8 sm:gap-6 lg:gap-8" style={{ marginBottom: '20px' }}>
+        <div className="w-full max-w-7xl flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-6 mb-6">
           {partners.map((partner, i) => (
             <motion.div
-              key={partner.name}
+              key={partner.badge}
               initial={{ y: 30, opacity: 0, scale: 0.95 }}
               animate={isInView ? { y: 0, opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.08 }}
-              className="group w-[160px] sm:w-[200px] lg:w-[240px]"
+              transition={{ duration: 0.5, delay: 0.1 + i * 0.05 }}
+              className="group w-[150px] sm:w-[190px] lg:w-[220px]"
             >
-              <div className="relative px-8 pb-12 pt-20 sm:px-6 sm:pb-8 sm:pt-12 rounded-3xl bg-[#f3f4f6]/45 backdrop-blur-3xl border border-white/60 hover:bg-white/60 hover:border-white/80 transition-all duration-300 hover:shadow-xl hover:shadow-accent/5 hover:-translate-y-1 text-center overflow-hidden h-full flex flex-col items-center justify-center">
-
-                {partner.logo ? (
+              <div className="relative p-5 sm:p-6 rounded-3xl bg-[#f3f4f6]/45 backdrop-blur-3xl border border-white/60 hover:bg-white/65 hover:border-white/90 transition-all duration-300 hover:shadow-xl hover:shadow-accent/5 hover:-translate-y-1 text-center overflow-hidden h-full min-h-[260px] sm:min-h-[290px] flex flex-col items-center justify-between">
+                {/* Logo container */}
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white shadow-sm flex items-center justify-center p-2 group-hover:scale-105 transition-transform duration-300 overflow-hidden border border-white/80" style={{ marginTop: '25px' }}>
                   <img
                     src={`${import.meta.env.BASE_URL}${partner.logo}`}
-                    alt={partner.name}
-                    className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-full mb-8 sm:mb-4 group-hover:scale-110 transition-transform duration-300"
-                    style={{ marginTop: '20px', marginBottom: '6px' }}
+                    alt={partner.badge}
+                    className="w-full h-full object-contain rounded-full"
                   />
-                ) : (
-                  <div className={`inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${partner.color} text-white font-heading font-bold text-xl mb-8 sm:mb-4 shadow-md group-hover:scale-110 transition-transform duration-300`}>
-                    {partner.name.charAt(0)}
-                  </div>
-                )}
+                </div>
 
-                <p className="font-body font-medium text-sm sm:text-lg text-text leading-tight" style={{ marginBottom: '4px' }}>
-                  {partner.name.split('\n').map((line, idx, arr) => (
-                    <span key={idx}>
-                      {line}
-                      {idx !== arr.length - 1 && <br />}
-                    </span>
-                  ))}
-                </p>
+                {/* Names */}
+                <div className="my-auto py-2 flex flex-col items-center">
+                  <h3 className="font-heading font-bold text-sm sm:text-base text-text tracking-wide mb-1">
+                    {partner.badge}
+                  </h3>
+                  <p className="font-body text-xs sm:text-sm text-text/80 leading-tight">
+                    {partner.name.split('\n').map((line, idx, arr) => (
+                      <span key={idx}>
+                        {line}
+                        {idx !== arr.length - 1 && <br />}
+                      </span>
+                    ))}
+                  </p>
+                </div>
 
+                {/* Instagram link */}
                 {partner.instagram && (
                   <a
                     href={partner.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-6 sm:mt-3 text-black hover:text-cta transition-colors duration-300" style={{ marginBottom: '4px' }}
-                    aria-label="Instagram"
+                    className="mt-2 p-1.5 rounded-full text-text/70 hover:text-[#E4405F] hover:bg-white/70 transition-all duration-300"
+                    style={{ marginBottom: '32px' }}
+                    aria-label={`${partner.badge} Instagram`}
                   >
                     <InstagramIcon className="w-5 h-5" />
                   </a>

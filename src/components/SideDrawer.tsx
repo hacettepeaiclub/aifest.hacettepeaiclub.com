@@ -13,7 +13,7 @@ const menuItems = [
   { icon: Users, label: 'Konuşmacılar', href: '#konusmacilar' },
   { icon: Award, label: 'Sponsorlar', href: '#sponsorlar' },
   { icon: Handshake, label: 'Paydaşlar', href: '#paydaslar' },
-  { icon: Clock, label: 'Program Akışı', href: '#programakisi' },
+  { icon: Clock, label: 'Takvim & Program', href: '#programakisi' },
   { icon: Calendar, label: "AI Fest Yolculuğu", href: '#tarihce' },
 ];
 
