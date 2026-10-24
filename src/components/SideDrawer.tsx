@@ -94,8 +94,10 @@ export default function SideDrawer({ isOpen, onClose }: SideDrawerProps) {
             {/* Bottom CTA */}
             <div className="flex justify-center" style={{ marginTop: '100px' }}>
               <a
-                href="#"
-                onClick={(e) => { e.preventDefault(); alert('Kayıtlar yakında başlayacak. Takipte kal!'); onClose(); }}
+                href="https://topluluklar.hacettepe.edu.tr/topluluklar/yapay-zeka-toplulugu"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={onClose}
                 className="flex items-center justify-center gap-2 w-[120px] py-3.5 bg-cta text-white font-body font-semibold text-base rounded-xl hover:bg-cta-hover transition-all duration-300 shadow-md shadow-cta/25 hover:shadow-lg hover:shadow-cta/35 active:scale-98"
               >
                 <span>Kayıt Ol</span>

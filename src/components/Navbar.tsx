@@ -99,8 +99,9 @@ export default function Navbar({ onMenuToggle, isMenuOpen }: NavbarProps) {
             </a>
             <a
               id="nav-register-btn"
-              href="#"
-              onClick={(e) => { e.preventDefault(); alert('Kayıtlar yakında başlayacak. Takipte kal!'); }}
+              href="https://topluluklar.hacettepe.edu.tr/topluluklar/yapay-zeka-toplulugu"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`text-[10px] sm:text-lg font-body font-semibold drop-shadow-sm hover:text-cta transition-colors duration-300 ${scrolled ? 'text-black' : 'text-white'}`}
               style={{ marginRight: '10px' }}
             >

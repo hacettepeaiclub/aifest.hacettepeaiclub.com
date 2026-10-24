@@ -159,8 +159,9 @@ export default function Hero() {
 
           <a
             id="hero-register-btn"
-            href="#"
-            onClick={(e) => { e.preventDefault(); alert('Kayıtlar çok yakında açılacak!'); }}
+            href="https://topluluklar.hacettepe.edu.tr/topluluklar/yapay-zeka-toplulugu"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-1 px-8 py-4 sm:px-10 sm:py-5 bg-cta text-white font-body font-bold text-base sm:text-xl rounded-2xl shadow-lg shadow-cta/40 hover:bg-cta-hover hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 whitespace-nowrap min-w-[180px] sm:min-w-[200px]"
           >
             <span>Kayıt Ol</span>
