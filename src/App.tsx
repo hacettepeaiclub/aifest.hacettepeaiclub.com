@@ -40,7 +40,7 @@ export default function App() {
             playsInline
             src={sectionBgVideo}
             className="fixed inset-0 w-full h-full object-cover pointer-events-none z-0"
-            style={{ opacity: 0.77, filter: 'brightness(1)' }}
+            style={{ opacity: 0.6, filter: 'brightness(0.87)' }}
           />
           <div className="relative z-10 w-full flex flex-col">
             <div style={{ marginBottom: '0px' }}><About /></div>
