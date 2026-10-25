@@ -70,7 +70,7 @@ function GoalCard({ goal, index, isInView }: { goal: typeof goals[0]; index: num
             <p className="text-sm sm:text-base mb-4 leading-relaxed">{goal.description}</p>
             <div className="flex flex-wrap gap-3 mt-[45px]">
               {goal.tags.map(tag => (
-                <span key={tag} className="inline-block px-8 py-3 rounded-md border border-transparent text-xs sm:text-sm font-medium">
+                <span key={tag} className="inline-block rounded-md border border-transparent text-xs sm:text-sm font-medium" style={{ margin: '-11px' }}>
                   {tag}
                 </span>
               ))}
@@ -91,7 +91,7 @@ function GoalCard({ goal, index, isInView }: { goal: typeof goals[0]; index: num
 
           {/* Inner Content Wrapper */}
           <div className="flex flex-col items-start text-left w-full max-w-sm p-4">
-            <div className="w-14 h-14 mb-6" style={{ marginBottom: '10px' }} />
+            <div className="w-14 h-14 mb-6" style={{ marginBottom: '-20px' }} />
 
             <h2 className="font-heading font-bold text-text text-2xl mb-8">{goal.title}</h2>
             <p className="text-md italic text-slate-800 font-body font-light" style={{ marginBottom: '8px', marginTop: '6px' }}>
@@ -102,7 +102,8 @@ function GoalCard({ goal, index, isInView }: { goal: typeof goals[0]; index: num
               {goal.tags.map(tag => (
                 <span
                   key={tag}
-                  className={`inline-block px-8 py-3 rounded-md backdrop-blur-2xl border border-white/5 bg-gradient-to-br from-white-50 to-white-300/50 text-slate-800 font-bold text-xs sm:text-md shadow-md transition-all duration-300 hover:bg-white/80 hover:text-text hover:-translate-y-0.5`}
+                  className={`inline-block rounded-md backdrop-blur-2xl border border-white/5 bg-gradient-to-br from-white-50 to-white-300/50 text-slate-800 font-bold text-xs sm:text-md shadow-md transition-all duration-300 hover:bg-white/80 hover:text-text hover:-translate-y-0.5`}
+                  style={{ padding: '3.1px' }}
                 >
                   {tag}
                 </span>

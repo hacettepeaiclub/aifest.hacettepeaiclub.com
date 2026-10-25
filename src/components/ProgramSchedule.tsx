@@ -186,15 +186,15 @@ const day2Schedule: ScheduleItem[] = [
 function BreakIcon({ type }: { type: string }) {
   switch (type) {
     case 'break':
-      return <Coffee className="w-4 h-4" />;
+      return <Coffee className="w-5 h-5" />;
     case 'registration':
-      return <DoorOpen className="w-4 h-4" />;
+      return <DoorOpen className="w-5 h-5" />;
     case 'opening':
-      return <Mic className="w-4 h-4" />;
+      return <Mic className="w-5 h-5" />;
     case 'closing':
-      return <Flag className="w-4 h-4" />;
+      return <Flag className="w-5 h-5" />;
     default:
-      return <UtensilsCrossed className="w-4 h-4" />;
+      return <UtensilsCrossed className="w-5 h-5" />;
   }
 }
 
@@ -295,28 +295,28 @@ export default function ProgramSchedule() {
               {/* Day Sub-Header Bar */}
               <div className="flex items-center justify-between px-6 py-3 bg-white/60 border-b border-white/50 backdrop-blur-md">
                 <div className="flex items-center" style={{ marginLeft: "10px" }}>
-                  <Calendar className="w-4 h-4 text-accent" />
-                  <span className="font-heading font-bold text-sm sm:text-base text-text" style={{ marginLeft: "10px" }}>
+                  <Calendar className="w-5 h-5 text-accent" />
+                  <span className="font-heading font-bold text-base sm:text-lg text-text" style={{ marginLeft: "10px" }}>
                     {activeDay === 1 ? '1. Gün Programı · 3 Kasım 2026 Salı' : '2. Gün Programı · 4 Kasım 2026 Çarşamba'}
                   </span>
                 </div>
               </div>
               {/* Header Row (Desktop) */}
-              <div className="hidden md:grid md:grid-cols-12 gap-4 px-6 py-4 bg-white/40 border-b border-white/40 font-heading font-bold text-xs sm:text-sm text-text-muted uppercase tracking-wider">
+              <div className="hidden md:grid md:grid-cols-12 gap-4 px-6 py-4 bg-white/40 border-b border-white/40 font-heading font-bold text-sm sm:text-base text-text-muted uppercase tracking-wider" style={{ padding: '6px' }}>
                 <div className="col-span-2 text-center flex items-center justify-center gap-2">
-                  <Clock className="w-4 h-4 text-accent" />
+                  <Clock className="w-5 h-5 text-accent" />
                   <span>Saat</span>
                 </div>
                 <div className="col-span-4 flex items-center gap-2">
-                  <BookOpen className="w-4 h-4 text-accent" />
+                  <BookOpen className="w-5 h-5 text-accent" />
                   <span>Konu</span>
                 </div>
                 <div className="col-span-3 flex items-center gap-2">
-                  <User className="w-4 h-4 text-accent" />
+                  <User className="w-5 h-5 text-accent" />
                   <span>Konuşmacı</span>
                 </div>
                 <div className="col-span-3 text-center flex items-center justify-center gap-2">
-                  <Sparkles className="w-4 h-4 text-cta" />
+                  <Sparkles className="w-5 h-5 text-cta" />
                   <span>Çekiliş Katılımı</span>
                 </div>
               </div>
@@ -344,11 +344,15 @@ export default function ProgramSchedule() {
                               ? 'bg-gradient-to-r from-emerald-50/60 to-teal-50/60'
                               : 'bg-gradient-to-r from-purple-50/60 to-pink-50/60'
                           }`}
+                        style={{ padding: '12px' }}
                       >
-                        <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-white/60 text-text-muted whitespace-nowrap">
+                        <span
+                          className="inline-flex items-center px-2.5 py-1 rounded-md text-sm font-semibold bg-white/60 text-text-muted whitespace-nowrap"
+                          style={{ padding: '2.5px' }}
+                        >
                           {item.time}
                         </span>
-                        <div className={`flex items-center gap-2 font-heading font-semibold text-sm ${item.type === 'break'
+                        <div className={`flex items-center gap-2 font-heading font-semibold text-base ${item.type === 'break'
                           ? 'text-amber-700'
                           : item.type === 'registration'
                             ? 'text-blue-700'
@@ -365,17 +369,21 @@ export default function ProgramSchedule() {
                       <div
                         key={item.id}
                         className="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4 p-5 sm:p-6 hover:bg-white/40 transition-colors duration-200 items-center"
+                        style={{ padding: '26px' }}
                       >
                         {/* Column 1: SAAT */}
                         <div className="md:col-span-2 flex items-center justify-center">
-                          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-accent/15 text-accent whitespace-nowrap">
+                          <span
+                            className="inline-flex items-center px-2.5 py-1 rounded-md text-sm font-semibold bg-accent/15 text-accent whitespace-nowrap"
+                            style={{ padding: '8px' }}
+                          >
                             {item.time}
                           </span>
                         </div>
 
                         {/* Column 2: KONU */}
                         <div className="md:col-span-4 flex flex-col items-start">
-                          <h3 className="font-heading font-semibold text-text text-sm sm:text-base leading-snug">
+                          <h3 className="font-heading font-semibold text-text text-base sm:text-lg leading-snug">
                             {item.topic}
                           </h3>
                         </div>
@@ -384,17 +392,17 @@ export default function ProgramSchedule() {
                         <div className="md:col-span-3 flex flex-col items-start">
                           {item.speaker ? (
                             <>
-                              <span className="font-body font-medium text-xs sm:text-sm text-text">
+                              <span className="font-body font-medium text-sm sm:text-base text-text">
                                 {item.speaker}
                               </span>
                               {item.speakerTitle && (
-                                <span className="font-body text-xs text-text-muted">
+                                <span className="font-body text-sm text-text-muted">
                                   {item.speakerTitle}
                                 </span>
                               )}
                             </>
                           ) : (
-                            <span className="font-body text-xs text-text-muted italic">
+                            <span className="font-body text-sm text-text-muted italic">
                               {item.speakerTitle || 'Yakında Açıklanacak'}
                             </span>
                           )}
@@ -404,9 +412,9 @@ export default function ProgramSchedule() {
                         <div className="md:col-span-3 flex justify-center items-center mt-2 md:mt-0">
                           <button
                             onClick={() => setSelectedRaffle(item)}
-                            className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-cta to-accent text-white font-body font-semibold text-xs leading-normal shadow-md shadow-cta/20 hover:shadow-lg hover:shadow-cta/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 text-center w-full md:w-auto"
+                            className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-cta to-accent text-white font-body font-semibold text-sm leading-normal shadow-md shadow-cta/20 hover:shadow-lg hover:shadow-cta/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 text-center w-full md:w-auto"
                           >
-                            <Gift className="w-4 h-4 shrink-0" />
+                            <Gift className="w-5 h-5 shrink-0" />
                             <span>Çekiliş Formu</span>
                           </button>
                         </div>
