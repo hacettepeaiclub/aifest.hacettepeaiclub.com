@@ -2,36 +2,7 @@ import { Mic } from 'lucide-react';
 import { LinkedInIcon } from './icons';
 import Reveal from './Reveal';
 import SectionHeader from './SectionHeader';
-
-interface Speaker {
-  name: string;
-  title: string;
-  org: string;
-  linkedin?: string;
-  image: string;
-}
-
-/** Etkinlik sunucusu — bölümün en üstünde ayrı gösterilir. */
-const host: Speaker = {
-  name: 'Gürçin Gökçebağ',
-  title: 'Educator & Strategist · Speaker',
-  org: 'WeAcademyTR',
-  linkedin: 'https://www.linkedin.com/in/gürçin-gökçebağ/',
-  image: 'speakers/gurcin_gokcebag.png',
-};
-
-const speakers: Speaker[] = [
-  { name: 'Merve Benlikaş Demirbağ', title: 'Otomotiv Sektöründe Yapay Zeka', org: 'Ford Otosan', linkedin: 'https://www.linkedin.com/in/merve-benlika%C5%9F-8b045b12a', image: 'speakers/merve_benlikas.png' },
-  { name: 'Bahar Serçin Halefoğlu', title: 'AI Governance Advisor', org: 'ALSE Data CEO', linkedin: 'https://www.linkedin.com/in/baharsercinhalefoglu/', image: 'speakers/bahar_sercin_halefoglu.png' },
-  { name: 'Dr. Fatih Hattatoğlu', title: 'AI Strategist & Data Scientist', org: 'Wise Maple', linkedin: 'https://www.linkedin.com/in/fatih-hattatoglu-phd/', image: 'speakers/fatih_hattatoglu.png' },
-  { name: 'Burak Tunca', title: 'Fintech Sektöründe Yapay Zeka', org: 'PayTR', linkedin: 'https://www.linkedin.com/in/buraktunca01', image: 'speakers/burak_tunca.jpg' },
-  { name: 'Çağdaş Hakan Aladağ', title: "Yapay Zeka'nın Geleceği", org: 'Hacettepe Üniversitesi', linkedin: 'https://www.linkedin.com/in/cagdas-hakan-aladag-279b9221/', image: 'speakers/cagdas_hakan_aladag.png' },
-  { name: 'Prof. Dr. Süleyman Tosun', title: 'Bilgisayar Mühendisliği', org: 'Hacettepe Üniversitesi', image: 'speakers/suleyman_tosun.jpg' },
-  { name: 'Ata Seren', title: 'Siber Güvenlikte Yapay Zeka', org: 'HAVELSAN', linkedin: 'https://www.linkedin.com/in/ataseren', image: 'speakers/ata_seren.png' },
-  { name: 'Azra Melis Ertan', title: 'Siber Güvenlik Uzmanı', org: 'Trendyol', linkedin: 'https://www.linkedin.com/in/azra-melis-ertan/', image: 'speakers/azra_melis_ertan.png' },
-  { name: 'Ege Mert Gülderen', title: 'Model Değil: Sistem', org: 'DeePix', linkedin: 'https://www.linkedin.com/in/egemertg%C3%BClderen/', image: 'speakers/ege_mert_gulderen.jpg' },
-  { name: 'Aytaç Mestçi', title: 'Digital Ecosystem Innovator', org: 'MarkeFront', linkedin: 'https://www.linkedin.com/in/aytacmestci/', image: 'speakers/aytac_mestci.png' },
-];
+import { host, speakerList, type Speaker } from '../data/speakers';
 
 const photo = (s: Speaker) => `${import.meta.env.BASE_URL}${s.image}`;
 
@@ -65,7 +36,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
         <div className="min-w-0">
           <h3 className="text-[15px] font-extrabold uppercase leading-snug text-fg sm:text-base">{speaker.name}</h3>
           <p className="mt-1 text-sm leading-snug text-fg-muted">{speaker.title}</p>
-          <p className="mt-2 font-display text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-soft">{speaker.org}</p>
+          <p lang="en" className="mt-2 font-display text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-soft">{speaker.org}</p>
         </div>
         <LinkedIn speaker={speaker} className="-mr-1.5 shrink-0" />
       </div>
@@ -104,9 +75,9 @@ export default function Speakers() {
           </article>
         </Reveal>
 
-        <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-3 lg:grid-cols-5">
-          {speakers.map((s, i) => (
-            <Reveal key={s.name} delay={(i % 5) * 0.05} className="h-full">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-3 lg:grid-cols-4">
+          {speakerList.map((s, i) => (
+            <Reveal key={s.name} delay={(i % 4) * 0.05} className="h-full">
               <SpeakerCard speaker={s} />
             </Reveal>
           ))}

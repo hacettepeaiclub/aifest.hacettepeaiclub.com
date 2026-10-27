@@ -124,7 +124,7 @@ export default function Sponsors() {
                         />
                       </a>
                       <div className={tier.size === 'md' ? 'flex flex-col gap-1' : 'flex flex-wrap items-center justify-between gap-1'}>
-                        <p className="font-display text-xs font-bold uppercase tracking-[0.12em] text-fg">{s.name}</p>
+                        <p lang="en" className="font-display text-xs font-bold uppercase tracking-[0.12em] text-fg">{s.name}</p>
                         <SocialLinks sponsor={s} />
                       </div>
                     </div>

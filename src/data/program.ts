@@ -1,8 +1,10 @@
 /*
- * AI Fest '26 program akışı.
+ * AI FEST'26 program akışı.
  * Oturum ID'leri (d1-s1 …) backend'deki FEST_SESSIONS listesiyle
  * (hacettepeaiclub.com/Backend/routers/aifest.py) birebir aynı olmalı: yoklama bu ID ile kaydedilir.
  */
+
+import { speakers, type SpeakerId } from './speakers';
 
 export type BreakIcon = 'registration' | 'opening' | 'lunch' | 'coffee' | 'closing';
 
@@ -33,6 +35,27 @@ export interface ProgramDay {
   items: ProgramItem[];
 }
 
+/*
+ * Oturumlar konuşmacılara bağlanır; konu, isim ve kurum src/data/speakers.ts'den gelir.
+ * Konuşmacısı olmayan oturumlarda `topic` (ve varsa `org`) elle verilir.
+ */
+type SessionInput = { id: string; time: string; speakers?: SpeakerId[]; topic?: string; org?: string };
+
+function session(n: number, input: SessionInput): ProgramSession {
+  const people = (input.speakers ?? []).map(id => speakers[id]);
+  return {
+    kind: 'session',
+    id: input.id,
+    time: input.time,
+    label: `${n}. Oturum`,
+    topic: input.topic ?? people[0]?.title ?? 'Yakında açıklanacak',
+    speaker: people.length ? people.map(p => p.name).join(' & ') : undefined,
+    org: people.length ? people.map(p => p.org).join(' & ') : input.org,
+  };
+}
+
+const TBA = 'Yakında açıklanacak';
+
 export const programDays: ProgramDay[] = [
   {
     day: 1,
@@ -42,14 +65,14 @@ export const programDays: ProgramDay[] = [
     items: [
       { kind: 'break', time: '09:30 – 09:45', label: 'Kayıt & Karşılama', icon: 'registration' },
       { kind: 'break', time: '09:45 – 10:00', label: 'Açılış Konuşması', icon: 'opening' },
-      { kind: 'session', id: 'd1-s1', time: '10:00 – 10:45', label: '1. Oturum', topic: 'Otomotiv Sektöründe Yapay Zeka', speaker: 'Merve Benlikaş Demirbağ', org: 'Ford Otosan' },
-      { kind: 'session', id: 'd1-s2', time: '11:00 – 11:45', label: '2. Oturum', topic: 'Yapay Zeka Yönetişimi ve Güvenliği', speaker: 'Bahar Serçin Halefoğlu', org: 'ALSE Data CEO · AI Governance Advisor' },
+      session(1, { id: 'd1-s1', time: '10:00 – 10:45', speakers: ['merve'] }),
+      session(2, { id: 'd1-s2', time: '11:00 – 11:45', speakers: ['bahar'] }),
       { kind: 'break', time: '11:45 – 12:30', label: 'Öğle Arası', icon: 'lunch' },
-      { kind: 'session', id: 'd1-s3', time: '12:30 – 13:15', label: '3. Oturum', topic: 'TUSAŞ Oturumu', org: 'TUSAŞ' },
-      { kind: 'session', id: 'd1-s4', time: '13:30 – 14:15', label: '4. Oturum', topic: 'Şirketlerde Rota Yeniden Hesaplanıyor', speaker: 'Dr. Fatih Hattatoğlu', org: 'Wise Maple · AI Strategist & Data Scientist' },
+      session(3, { id: 'd1-s3', time: '12:30 – 13:15', topic: 'TUSAŞ Oturumu', org: 'TUSAŞ' }),
+      session(4, { id: 'd1-s4', time: '13:30 – 14:15', speakers: ['fatih'] }),
       { kind: 'break', time: '14:15 – 14:45', label: 'Kahve & Networking', icon: 'coffee' },
-      { kind: 'session', id: 'd1-s5', time: '14:45 – 15:30', label: '5. Oturum', topic: 'Fintech Sektöründe Yapay Zeka', speaker: 'Burak Tunca', org: 'PayTR' },
-      { kind: 'session', id: 'd1-s6', time: '15:45 – 16:30', label: '6. Oturum', topic: 'Yakında açıklanacak' },
+      session(5, { id: 'd1-s5', time: '14:45 – 15:30', topic: TBA }),
+      session(6, { id: 'd1-s6', time: '15:45 – 16:30', speakers: ['suleyman'] }),
       { kind: 'break', time: '16:30', label: 'Kapanış', icon: 'closing' },
     ],
   },
@@ -61,14 +84,14 @@ export const programDays: ProgramDay[] = [
     items: [
       { kind: 'break', time: '09:30 – 09:45', label: 'Kayıt & Karşılama', icon: 'registration' },
       { kind: 'break', time: '09:45 – 10:00', label: 'Açılış Konuşması', icon: 'opening' },
-      { kind: 'session', id: 'd2-s1', time: '10:00 – 10:45', label: '1. Oturum', topic: "Yapay Zeka'nın Geleceği", speaker: 'Çağdaş Hakan Aladağ', org: 'Hacettepe Üniversitesi · İstatistik' },
-      { kind: 'session', id: 'd2-s2', time: '11:00 – 11:45', label: '2. Oturum', topic: 'Siber Güvenlikte Yapay Zeka', speaker: 'Ata Seren & Azra Melis Ertan', org: 'HAVELSAN & Trendyol' },
+      session(1, { id: 'd2-s1', time: '10:00 – 10:45', speakers: ['cagdas'] }),
+      session(2, { id: 'd2-s2', time: '11:00 – 11:45', speakers: ['ata', 'azra'] }),
       { kind: 'break', time: '11:45 – 12:30', label: 'Öğle Arası', icon: 'lunch' },
-      { kind: 'session', id: 'd2-s3', time: '12:30 – 13:15', label: '3. Oturum', topic: 'ASELSAN Oturumu', org: 'ASELSAN' },
-      { kind: 'session', id: 'd2-s4', time: '13:30 – 14:15', label: '4. Oturum', topic: 'Model Değil: Sistem', speaker: 'Ege Mert Gülderen', org: 'DeePix' },
+      session(3, { id: 'd2-s3', time: '12:30 – 13:15', speakers: ['serhat'] }),
+      session(4, { id: 'd2-s4', time: '13:30 – 14:15', speakers: ['ege'] }),
       { kind: 'break', time: '14:15 – 14:45', label: 'Kahve & Networking', icon: 'coffee' },
-      { kind: 'session', id: 'd2-s5', time: '14:45 – 15:30', label: '5. Oturum', topic: 'E-Ticaretin Geleceği ve Yapay Zeka', speaker: 'Aytaç Mestçi', org: 'MarkeFront · Digital Ecosystem Innovator' },
-      { kind: 'session', id: 'd2-s6', time: '15:45 – 16:30', label: '6. Oturum', topic: 'Yakında açıklanacak' },
+      session(5, { id: 'd2-s5', time: '14:45 – 15:30', speakers: ['aytac'] }),
+      session(6, { id: 'd2-s6', time: '15:45 – 16:30', speakers: ['burak'] }),
       { kind: 'break', time: '16:30', label: 'Kapanış', icon: 'closing' },
     ],
   },
