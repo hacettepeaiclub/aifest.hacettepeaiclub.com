@@ -9,9 +9,6 @@ The official interactive web experience for **AI Fest 2026**, organized by Hacet
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Animations & Interactivity:** 
   - [Framer Motion](https://www.framer.com/motion/) (Scroll animations, view transitions)
-  - CSS 3D Transforms (Glassmorphism, 3D flip cards)
-  - `react-pageflip` (3D interactive calendar/timeline)
-  - `@react-three/fiber` & `@react-three/drei` (3D Countdown component)
 - **Icons:** [Lucide React](https://lucide.dev/)
 
 ## 🧠 Core Logic & Architecture
@@ -26,10 +23,9 @@ The application is built using a modern, component-driven React architecture. It
 - **`SideDrawer.tsx` & `Navbar.tsx`**: Ensures seamless navigation across both desktop and mobile devices.
 
 ### Design System
-- **Aesthetic:** Deep space / modern tech-inspired UI. It heavily utilizes gradients, glowing background blobs (`blur` utilities), and glassmorphism (`backdrop-blur`).
-- **Color Palette:** 
-  - `Deep`: Dark background theme
-  - `CTA`, `Accent`, `Badge`: Vibrant highlight colors used dynamically across different sections for visual hierarchy.
+- **Aesthetic:** Afişle aynı dil — koyu lacivert + mor zemin (`src/assets/bg.webp`), Montserrat 800/900 büyük harf başlıklar, geniş aralıklı etiketler (`.eyebrow`), ince ayırıcı çizgiler, düz paneller. Gradyan yazı yalnızca hero'daki '26'da. Düzen: `.container-page`, `.section`, `SectionHeader` — hepsi `src/index.css` içinde.
+- **Renkler:** `night` (zemin), `fg` / `fg-muted` / `fg-subtle` (metin), `brand-blue` → `brand-violet` (vurgu gradyanı). Açık mavi / pembe kullanılmıyor.
+- Global `* { margin:0; padding:0 }` reset'i eklemeyin: katmansız CSS Tailwind v4 utility'lerini ezer.
 
 ## 🗺️ Page Layout Scheme
 
@@ -43,6 +39,20 @@ The landing page follows a continuous, vertical-scroll narrative:
 7. **Timeline:** 3D interactive flipbook for the event schedule
 8. **Location:** Venue details and map
 9. **Footer:** Contact and social links
+
+## 🎟️ Oturum Yoklaması & Çekiliş
+
+Backend, ana sitenin FastAPI servisidir (`hacettepeaiclub.com/Backend/routers/aifest.py`,
+varsayılan `https://api.hacettepeaiclub.com`, `.env` ile `VITE_API_URL`).
+
+| Sayfa | Kim | İş |
+|---|---|---|
+| **`/yoklama`** (kısa link) · QR: `/#yoklama/d1-s1` · etkinlik günlerinde sağ alttaki **Yoklama Ver** butonu · Program → Yoklama Ver | Katılımcı | O anki oturum seçili gelir; TC/okul no + telefonun son 4 hanesi + salondaki kod |
+| `/yonetim/` | Ekip (hacettepeaiclub.com admin hesabı) | Ana sayfadaki mobil **Yoklamaya Gir** butonunu aç/kapa, katılımcı Excel'ini yükle, oturum kodları/modları, **Ekrana Yansıt** (QR + kod), kazananlar, **Excel İndir** |
+| `/cekilis/` | Sahnedeki PC | Oturum seç → **Boşluk**: çekiliş, **F**: tam ekran → kazananı onayla / salonda değilse yeniden çek |
+
+Oturum ID'leri `src/data/program.ts` ile backend'deki `FEST_SESSIONS` arasında aynı olmalıdır.
+Katılımcı Excel'leri kişisel veri içerir; repoya **eklenmez** (`.gitignore`).
 
 ## 📦 Getting Started
 

@@ -1,0 +1,16 @@
+# AI Fest '26 sitesi — ana sitedeki gibi Nginx Proxy Manager arkasında çalışır.
+# NPM'de Proxy Host: aifest.hacettepeaiclub.com → http://aifest_frontend:80 (SSL: Let's Encrypt)
+services:
+  web:
+    build:
+      context: .
+      args:
+        VITE_API_URL: ${VITE_API_URL:-}
+    container_name: aifest_frontend
+    restart: always
+    networks:
+      - proxy_net
+
+networks:
+  proxy_net:
+    external: true

@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Katılımcı listeleri kişisel veri içerir — asla commitlenmez
+*.xlsx
+*.xls
+*.csv
+.env
+.claude

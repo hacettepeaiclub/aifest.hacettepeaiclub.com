@@ -1,0 +1,13 @@
+node_modules
+dist
+.git
+.idea
+.vscode
+.claude
+.env
+*.local
+*.log
+# Katılımcı listeleri kişisel veri içerir — imaja asla girmesin
+*.xlsx
+*.xls
+*.csv
