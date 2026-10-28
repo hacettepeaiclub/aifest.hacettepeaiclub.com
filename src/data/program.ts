@@ -54,8 +54,6 @@ function session(n: number, input: SessionInput): ProgramSession {
   };
 }
 
-const TBA = 'Yakında açıklanacak';
-
 export const programDays: ProgramDay[] = [
   {
     day: 1,
@@ -71,7 +69,7 @@ export const programDays: ProgramDay[] = [
       session(3, { id: 'd1-s3', time: '12:30 – 13:15', topic: 'TUSAŞ Oturumu', org: 'TUSAŞ' }),
       session(4, { id: 'd1-s4', time: '13:30 – 14:15', speakers: ['fatih'] }),
       { kind: 'break', time: '14:15 – 14:45', label: 'Kahve & Networking', icon: 'coffee' },
-      session(5, { id: 'd1-s5', time: '14:45 – 15:30', topic: TBA }),
+      session(5, { id: 'd1-s5', time: '14:45 – 15:30', speakers: ['sinan'] }),
       session(6, { id: 'd1-s6', time: '15:45 – 16:30', speakers: ['suleyman'] }),
       { kind: 'break', time: '16:30', label: 'Kapanış', icon: 'closing' },
     ],

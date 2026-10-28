@@ -2,10 +2,9 @@ import { Car, MapPin, Navigation, Users, Coffee } from 'lucide-react';
 import Reveal from './Reveal';
 import SectionHeader from './SectionHeader';
 
-const MAP_EMBED =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.607!2d32.7337!3d39.8667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f8a0a4a7e2d%3A0x9c6b1e3b8e0a1234!2sTun%C3%A7alp%20%C3%96zgen%20Kongre%20ve%20Konferans%20Merkezi!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str';
-const DIRECTIONS =
-  'https://www.google.com/maps/dir//Tun%C3%A7alp+%C3%96zgen+Kongre+ve+Konferans+Merkezi,+Hacettepe+%C3%9Cniversitesi,+Ankara';
+// Mehmet Akif Ersoy K-Salonu, Beytepe (39.868004, 32.737233)
+const MAP_EMBED = 'https://maps.google.com/maps?q=39.868004,32.7372327&z=17&hl=tr&output=embed';
+const DIRECTIONS = 'https://maps.app.goo.gl/42KwXeuGJLjj4MJZ8';
 
 const features = [
   { icon: Users, text: '300 kişilik konferans salonu' },

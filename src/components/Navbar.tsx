@@ -36,7 +36,7 @@ export default function Navbar({ onMenuOpen, onAttend }: NavbarProps) {
           <span className="font-display text-base font-extrabold sm:hidden">AI FEST'26</span>
         </a>
 
-        <nav className="hidden items-center lg:flex" aria-label="Ana menü">
+        <nav className="hidden items-center xl:flex" aria-label="Ana menü">
           {navItems.map(item => (
             <a
               key={item.href}
@@ -56,7 +56,7 @@ export default function Navbar({ onMenuOpen, onAttend }: NavbarProps) {
         <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary !h-10 !px-5">
           Kayıt Ol
         </a>
-        <button onClick={onMenuOpen} className="icon-btn lg:hidden" aria-label="Menüyü aç">
+        <button onClick={onMenuOpen} className="icon-btn xl:hidden" aria-label="Menüyü aç">
           <Menu className="h-5 w-5" />
         </button>
       </div>

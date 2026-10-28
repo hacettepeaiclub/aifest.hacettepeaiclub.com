@@ -26,6 +26,7 @@ export const speakers = {
   merve: { name: 'Merve Benlikaş Demirbağ', title: 'Otomotiv Sektöründe Yapay Zeka', org: 'Senior Database Administrator @ Ford Otosan', linkedin: 'https://www.linkedin.com/in/merve-benlika%C5%9F-8b045b12a', image: 'speakers/merve_benlikas.png' },
   bahar: { name: 'Bahar Serçin Halefoğlu', title: 'Yapay Zeka Yönetişimi ve Güvenliği', org: 'ALSE Data CEO & AI Governance Advisor', linkedin: 'https://www.linkedin.com/in/baharsercinhalefoglu/', image: 'speakers/bahar_sercin_halefoglu.png' },
   fatih: { name: 'Fatih Hattatoğlu', title: 'Şirketlerde Rota Yeniden Hesaplanıyor', org: 'AI Strategist & Data Scientist @ Wise Maple', linkedin: 'https://www.linkedin.com/in/fatih-hattatoglu-phd/', image: 'speakers/fatih_hattatoglu.png' },
+  sinan: { name: 'Dr. Sinan Onur Altınuç', title: 'Yapay Zeka Çağında İş Bulmak ve İşe Yaramak', org: 'Yapay Zekâ Danışmanı · Prometheus AI Kurucusu', image: 'speakers/sinan_onur_altinuc.jpg' },
   suleyman: { name: 'Prof. Dr. Süleyman Tosun', title: 'Yapay Zeka Odaklı Yonga Tasarımı', org: 'Prof. @ Hacettepe University', image: 'speakers/suleyman_tosun.jpg' },
   cagdas: { name: 'Prof. Dr. Çağdaş Hakan Aladağ', title: 'Çatıya Konan Ejderha', org: 'Prof. @ Hacettepe University', linkedin: 'https://www.linkedin.com/in/cagdas-hakan-aladag-279b9221/', image: 'speakers/cagdas_hakan_aladag.png' },
   ata: { name: 'Ata Seren', title: 'Siber Güvenlikte Yapay Zeka', org: 'Cyber Security Engineer @ HAVELSAN', linkedin: 'https://www.linkedin.com/in/ataseren', image: 'speakers/ata_seren.png' },
